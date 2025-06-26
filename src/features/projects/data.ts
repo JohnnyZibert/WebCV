@@ -1,0 +1,70 @@
+import {
+  maxmodal1,
+  maxmodal2,
+  maxmodal3,
+  prosv1,
+  prosv2,
+  prosv3,
+  spartak1,
+  spartak2,
+  spartak3,
+} from '@/shared/assets/images/images'
+
+export const projectsData = [
+  {
+    href: 'https://spartak.com/',
+    githubLink: '',
+    projectName: 'Spartak',
+    org: 'DEX technologies',
+    year: '2024',
+    images: [spartak1, spartak2, spartak3],
+    description:
+      'A multifunctional platform for Spartak Moscow Football Club that connects fans with the team. The site features up-to-date club news, an online merchandise store, a youth football academy section, ticket purchasing, player voting, and special offers.',
+    chips: [
+      'React.js',
+      'Next.js',
+      'Redux toolkit',
+      'React hook form',
+      'Styled components',
+      'i18n',
+    ],
+  },
+  {
+    href: 'https://prosv.ru/',
+    githubLink: '',
+    projectName: 'Prosv',
+    org: 'aeroidea',
+    year: '2022-2024',
+    images: [prosv1, prosv2, prosv3],
+    description:
+      'A leader in integrated learning, development and leisure products that creates shared values ​​and opportunities to realize potential.',
+    chips: [
+      'React.js',
+      'Next.js',
+      'Zustand',
+      'Tanstack Query',
+      'SCSS',
+      'Storybook',
+      'Jest',
+      'React testing library',
+    ],
+  },
+  {
+    href: 'https://maxmodal.com/',
+    githubLink: '',
+    projectName: 'MaxModal',
+    org: 'DEX technologies',
+    year: '2024',
+    images: [maxmodal2, maxmodal1, maxmodal3],
+    description:
+      'MaxModal is a logistics and maritime transportation company, typically involved in container shipping and multimodal transport (sea, rail, road). The name suggests a focus on maximizing modal efficiency — using multiple modes of transport to optimize delivery routes and costs.',
+    chips: [
+      'React.js',
+      'Redux',
+      'Styled components',
+      'i18n',
+      'antd v3',
+      'react-helmet',
+    ],
+  },
+]
