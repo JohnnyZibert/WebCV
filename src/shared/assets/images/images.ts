@@ -20,6 +20,9 @@ import imgOldPortfolio1 from './old_portfolio_1.png'
 import imgOldPortfolio2 from './old_portfolio_2.png'
 import imgPizza from './pizza.png'
 import imgPizzaC from './pizzaC.png'
+import portfolio1 from './portfolio1.png'
+import portfolio2 from './portfolio2.png'
+import portfolio3 from './portfolio3.png'
 import prosv1 from './prosv1.png'
 import prosv2 from './prosv2.png'
 import prosv3 from './prosv3.png'
@@ -63,6 +66,9 @@ export {
   maxmodal1,
   maxmodal2,
   maxmodal3,
+  portfolio1,
+  portfolio2,
+  portfolio3,
   prosv1,
   prosv2,
   prosv3,

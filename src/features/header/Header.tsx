@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Socials } from '@/features/socials/Socials'
 import { AnimateFromSide } from '@/shared/animate/AnimateFromSide'
+import myPhoto from '@/shared/assets/images/me.jpg'
 import { H1, H2, P16 } from '@/shared/ui/Typography'
 import { ThemeSwitcherButton } from '@/widgets/providers/theme/ThemeSwitcherButton'
 
@@ -17,6 +18,15 @@ export const Header = () => {
     >
       <AnimateFromSide type={'left'}>
         <div className={'items-center z-10'}>
+          <div className={'w-full flex justify-center mb-4'}>
+            <Image
+              src={myPhoto.src}
+              alt={'me'}
+              height={250}
+              width={250}
+              className={'rounded-lg shadow-lg p-3 bg-white'}
+            />
+          </div>
           <Link href={'/'}>
             <H1>Evgeniy Zgirdan</H1>
           </Link>

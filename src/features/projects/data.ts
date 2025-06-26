@@ -2,6 +2,9 @@ import {
   maxmodal1,
   maxmodal2,
   maxmodal3,
+  portfolio1,
+  portfolio2,
+  portfolio3,
   prosv1,
   prosv2,
   prosv3,
@@ -11,6 +14,24 @@ import {
 } from '@/shared/assets/images/images'
 
 export const projectsData = [
+  {
+    href: 'https://maxmodal.com/',
+    githubLink: '',
+    projectName: 'WebCV',
+    org: '',
+    year: '',
+    images: [portfolio1, portfolio2, portfolio3],
+    description:
+      'An interactive portfolio website designed to highlight my frontend skills, featuring a clean UI, animated transitions, and structured sections for background, experience, tech stack, and projects.',
+    chips: [
+      'React.js',
+      'Typescript',
+      'Next.js',
+      'Tailwindcss',
+      'Framer-motion',
+      'Axios',
+    ],
+  },
   {
     href: 'https://spartak.com/',
     githubLink: '',
@@ -23,6 +44,7 @@ export const projectsData = [
     chips: [
       'React.js',
       'Next.js',
+      'Typescript',
       'Redux toolkit',
       'React hook form',
       'Styled components',
@@ -42,6 +64,7 @@ export const projectsData = [
       'React.js',
       'Next.js',
       'Zustand',
+      'Typescript',
       'Tanstack Query',
       'SCSS',
       'Storybook',
@@ -61,6 +84,7 @@ export const projectsData = [
     chips: [
       'React.js',
       'Redux',
+      'Typescript',
       'Styled components',
       'i18n',
       'antd v3',

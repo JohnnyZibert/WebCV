@@ -2,7 +2,6 @@ import { Resume } from '@/features/experience/Resume'
 import { intExpData } from '@/features/interestingExperience/data'
 import { AnimationOneByOne } from '@/shared/animate/AnimationOneByOne'
 import { useAnimateInTurn } from '@/shared/animate/useAnimateInTurn'
-import { Button } from '@/shared/ui/button/Button'
 import { SectionHeader } from '@/shared/ui/SectionHeader'
 import { H3, P14 } from '@/shared/ui/Typography'
 

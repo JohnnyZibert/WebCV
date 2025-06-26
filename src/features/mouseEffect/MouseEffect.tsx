@@ -55,6 +55,7 @@ export const MouseEffect = ({ children }: { children: ReactNode }) => {
       </div>
       {children}
 
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>{`
         @keyframes smokeFade {
           0% {
