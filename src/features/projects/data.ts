@@ -15,7 +15,7 @@ import {
 
 export const projectsData = [
   {
-    href: 'https://maxmodal.com/',
+    href: 'https://my-web-cv-kappa.vercel.app/',
     githubLink: '',
     projectName: 'WebCV',
     org: '',
