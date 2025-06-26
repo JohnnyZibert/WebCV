@@ -16,7 +16,7 @@ import {
 export const projectsData = [
   {
     href: 'https://my-web-cv-kappa.vercel.app/',
-    githubLink: '',
+    githubLink: 'https://github.com/JohnnyZibert/WebCV',
     projectName: 'WebCV',
     org: '',
     year: '',
