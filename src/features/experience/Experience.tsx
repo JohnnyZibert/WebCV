@@ -1,5 +1,5 @@
 'use client'
-import { experienceData } from '@/features/experience/data'
+import { useExperienceData } from '@/features/experience/data'
 import { Resume } from '@/features/experience/Resume'
 import { AnimationOneByOne } from '@/shared/animate/AnimationOneByOne'
 import { useAnimateInTurn } from '@/shared/animate/useAnimateInTurn'
@@ -9,6 +9,7 @@ import { P14 } from '@/shared/ui/Typography'
 
 export const Experience = () => {
   const { wrapperRef, hoverId, getProps } = useAnimateInTurn()
+  const experienceData = useExperienceData()
   return (
     <section className={' mt-4 laptop:mt-20 relative'}>
       <SectionHeader>Experience</SectionHeader>

@@ -15,7 +15,7 @@ export const Switch = ({
 }) => {
   return (
     <motion.div
-      className="w-[60px] h-[20px] rounded-[15px] dark:bg-white bg-gray-50 relative cursor-pointer mt-6"
+      className="w-[60px] h-[20px] rounded-[15px] dark:bg-white bg-gray-50 relative cursor-pointer mt-5"
       onClick={handleSwitchTheme}
       initial={false}
       animate={isDarkMode ? 'dark' : 'light'}

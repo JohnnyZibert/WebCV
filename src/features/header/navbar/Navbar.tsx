@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 import { ReactNode } from 'react'
 import { Link } from 'react-scroll'
 
@@ -9,12 +10,14 @@ import { useNavScroll } from './useNavScroll'
 
 export const Navbar = () => {
   const activeId = useNavScroll('content-block', navBarBlocks[0].id)
+  const t = useTranslations('Menu')
+
   return (
     <nav>
       <ul className={'space-y-3'}>
-        {navBarBlocks.map(({ id, label }) => (
+        {navBarBlocks.map(({ id }) => (
           <MenuItem key={id} active={activeId === id} id={id}>
-            {label}
+            {t(id)}
           </MenuItem>
         ))}
       </ul>
