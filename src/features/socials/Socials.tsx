@@ -1,3 +1,8 @@
+'use client'
+
+import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+
 import {
   IconGithub,
   IconLinkedin,
@@ -8,6 +13,9 @@ import {
 import { P14 } from '@/shared/ui/Typography'
 
 export const Socials = () => {
+  const t = useTranslations('Resume')
+  const params = useParams()
+
   return (
     <div className={'flex gap-5 items-center'}>
       {socialNetworks.map(({ link, Icon }) => (
@@ -20,11 +28,15 @@ export const Socials = () => {
         </a>
       ))}
       <a
-        href={'Zgirdan_Evgeniy_En.pdf'}
+        href={
+          params.locale === 'en'
+            ? 'Zgirdan_Evgeniy_En.pdf'
+            : 'Evgeniy_Zgirdan_RU.pdf'
+        }
         target="_blank"
         rel="noopener noreferrer"
       >
-        <P14 className={'dark:!text-white'}> Download Resume</P14>
+        <P14 className={'dark:!text-white'}>{t('resume')}</P14>
       </a>
     </div>
   )

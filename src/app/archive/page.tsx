@@ -1,13 +1,26 @@
+import { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
 import { PageWrapper } from '@/app/archive/PageWrapper'
-import { projectsData } from '@/features/projects/data'
+import { useProjectsData } from '@/features/projects/data'
 import { IconArrowUpRight } from '@/shared/assets/icons/icons'
 import { Chip } from '@/shared/ui/Chip'
 import { H1, P14, P16 } from '@/shared/ui/Typography'
 
+interface IProjectsData {
+  href: string
+  githubLink: string
+  projectName: string
+  org: string
+  year: string
+  images: StaticImageData[]
+  description: string
+  chips: string[]
+}
+
 const Archive = () => {
+  const projectsData = useProjectsData()
   return (
     <PageWrapper>
       <div className={'container py-12 laptop:py-20 relative'}>
@@ -52,7 +65,7 @@ const Archive = () => {
 
 export default Archive
 
-const TableComponent = ({ data }: { data: typeof projectsData }) => {
+const TableComponent = ({ data }: { data: IProjectsData[] }) => {
   return (
     <table className="min-w-max w-full table-auto">
       <thead

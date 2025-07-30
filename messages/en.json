@@ -1,0 +1,98 @@
+{
+  "About": {
+    "profession": "Frontend developer",
+    "name": "Evgeniy Zgirdan",
+    "title": "About",
+    "aboutMe": "I create visually appealing and intuitive user interfaces for web applications.",
+    "first": "In 2020, I began exploring user interface development, which quickly evolved into a deep passion for coding and web technologies. Since then, I’ve had the opportunity to build software for both a",
+    "agency": "digital agency",
+    "and": "and a",
+    "company": "large company",
+    "afterCompanies": ", gaining valuable experience in creating intuitive, user-focused solutions.",
+    "focus": "Today, my focus is on advancing my frontend development skills while finding a team that values collaboration, innovation, and growth.",
+    "dreamTeamTitle": "What does my dream team look like?",
+    "dreamTeam1": "It’s made up of passionate, highly skilled professionals who thrive on innovation and consistently push the boundaries of frontend development. They value collaboration, support each other, and maintain open lines of communication that foster idea-sharing and collective problem-solving.",
+    "dreamTeam2": "This ideal team prioritizes continuous learning and personal development, embraces emerging technologies, and stays ahead of industry trends. Diversity is also a key value — different backgrounds and perspectives are seen as essential to creating outstanding user experiences.",
+    "dreamTeam3": "We work together on impactful, exciting projects that make a real difference in users’ lives. Above all, it’s a positive, creative, and inspiring environment where everyone’s contributions are recognized, and where we strive for excellence in delivering top-tier frontend solutions.",
+    "whyChangeTitle": "Why am I looking for a new team?",
+    "reason1": "I chose to leave my previous role to focus on both personal and professional growth. I’m eager to broaden my expertise, take on new challenges, and continue evolving as a frontend developer.",
+    "reason2": "My decision was motivated by a lack of growth opportunities in my previous company. I'm now seeking a role where I can contribute meaningfully while being supported in my ambitions — ideally in a team working on innovative and purpose-driven projects."
+},
+  "Menu": {
+    "about": "About",
+    "experience": "Experience",
+    "interesting_experience": "Interesting Experience",
+    "projects": "Projects"
+  },
+  "Resume": {
+    "resume": "Download Resume",
+    "viewResume": "View full Resume"
+  },
+  "Experience": {
+    "dex": {
+      "date": "Aug 2024 - up to today",
+      "position": "Frontend Engineer",
+      "description": [
+        "Support and development of multiple projects: fixing bugs, improving existing functionality, and developing new features",
+        "Initiated the development of two projects, selection of necessary technologies",
+        "I successfully migrated the in-app chat system to a new architecture based on Matrix Synapse.",
+        "Updating dependencies to the latest versions, improving security and stability",
+        "Integration of TypeScript, improving code readability, simplifying refactoring, and reducing errors",
+        "Optimizing bundle size, reducing file weight for faster loading",
+        "Implementing modern architecture (FSD) and refactoring the code, making the project more scalable",
+        "Provided assistance and conducted code reviews for junior developers in the team.",
+        "Using Zustand for efficient and easy local state management",
+        "Enhancing Developer Experience (DX): configuring linters, formatters, and automating development processes"
+      ]
+    },
+    "aeroidea": {
+      "date": "Oct 2022 - Jun 2024",
+      "position": "Frontend Engineer",
+      "description": [
+        "Developed an audio player for language learning materials.",
+        "Implemented code autogeneration tools to streamline development.",
+        "Added and documented UI components in Storybook.",
+        "Addressed the needs of users with disabilities: implemented themes with high contrast, as well as options for increasing font sizes and letter spacing.",
+        "Wrote unit tests to ensure component reliability.",
+        "Built a product card slider with media support and user-generated content.",
+        "Provided assistance and conducted code reviews for junior developers in the team.",
+        "Performed fine-tuning of page caching for faster page load times."
+      ]
+    }
+  },
+  "Projects": {
+    "webcv": {
+      "name": "WebCV",
+      "description": "An interactive portfolio website designed to highlight my frontend skills, featuring a clean UI, animated transitions, and structured sections for background, experience, tech stack, and projects."
+    },
+    "spartak": {
+      "name": "Spartak",
+      "description": "A multifunctional platform for Spartak Moscow Football Club that connects fans with the team. The site features up-to-date club news, an online merchandise store, a youth football academy section, ticket purchasing, player voting, and special offers."
+    },
+    "prosv": {
+      "name": "Prosv",
+      "description": "A leader in integrated learning, development and leisure products that creates shared values ​​and opportunities to realize potential."
+    },
+    "maxmodal": {
+      "name": "MaxModal",
+      "description": "MaxModal is a logistics and maritime transportation company, typically involved in container shipping and multimodal transport (sea, rail, road). The name suggests a focus on maximizing modal efficiency — using multiple modes of transport to optimize delivery routes and costs."
+    },
+    "name": "Evgeniy Zgirdan",
+    "allProjects": "View all Projects"
+  },
+  "Interesting_exp": {
+    "title": "Interesting Experience",
+    "intro": "During my tenure at «Aero idea» and «Dex technologies», I encountered a range of interesting and challenging tasks that required a creative approach and deep knowledge in frontend development.",
+    "conclusion": "These experiences not only allowed me to expand my knowledge and skills in frontend development but also taught me to solve complex problems, collaborate in teams, and find creative solutions.",
+    "list": {
+      "maxmodal": "MaxModal project: Replaced the outdated Jabber-based internal chat with Matrix Synapse. Integrated the new service while preserving existing chat functionality and the notification system, gaining deep insight into the Matrix protocol.",
+      "launch": "Project Launch Experience: Independently initiated new projects from scratch, selected appropriate tech stacks, set up development environments, and collaborated with DevOps to deploy dev and production environments. Gained experience containerizing React applications in a Docker container to simplify deployment and ensure environment consistency.",
+      "prosv": "Project Prosveshchenie Group: Developed an audio section with audio player for language textbooks with language-based filters, textbook listings, and detailed textbook pages. Users can filter by grade and access audio materials with a custom-built in-app audio player."
+    }
+  },
+  "Locale": {
+    "ru": "RU",
+    "en": "EN",
+    "locale": "{locale, select, ru {Ru} en {En} other {Unbekannt}}"
+  }
+}

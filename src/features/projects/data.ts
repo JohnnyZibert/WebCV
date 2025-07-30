@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+
 import {
   maxmodal1,
   maxmodal2,
@@ -13,82 +15,82 @@ import {
   spartak3,
 } from '@/shared/assets/images/images'
 
-export const projectsData = [
-  {
-    href: 'https://my-web-cv-kappa.vercel.app/',
-    githubLink: 'https://github.com/JohnnyZibert/WebCV',
-    projectName: 'WebCV',
-    org: '',
-    year: '',
-    images: [portfolio1, portfolio2, portfolio3],
-    description:
-      'An interactive portfolio website designed to highlight my frontend skills, featuring a clean UI, animated transitions, and structured sections for background, experience, tech stack, and projects.',
-    chips: [
-      'React.js',
-      'Typescript',
-      'Next.js',
-      'Tailwindcss',
-      'Framer-motion',
-      'Axios',
-    ],
-  },
-  {
-    href: 'https://spartak.com/',
-    githubLink: '',
-    projectName: 'Spartak',
-    org: 'DEX technologies',
-    year: '2024',
-    images: [spartak1, spartak2, spartak3],
-    description:
-      'A multifunctional platform for Spartak Moscow Football Club that connects fans with the team. The site features up-to-date club news, an online merchandise store, a youth football academy section, ticket purchasing, player voting, and special offers.',
-    chips: [
-      'React.js',
-      'Next.js',
-      'Typescript',
-      'Redux toolkit',
-      'React hook form',
-      'Styled components',
-      'i18n',
-    ],
-  },
-  {
-    href: 'https://prosv.ru/',
-    githubLink: '',
-    projectName: 'Prosv',
-    org: 'aeroidea',
-    year: '2022-2024',
-    images: [prosv1, prosv2, prosv3],
-    description:
-      'A leader in integrated learning, development and leisure products that creates shared values ​​and opportunities to realize potential.',
-    chips: [
-      'React.js',
-      'Next.js',
-      'Zustand',
-      'Typescript',
-      'Tanstack Query',
-      'SCSS',
-      'Storybook',
-      'Jest',
-      'React testing library',
-    ],
-  },
-  {
-    href: 'https://maxmodal.com/',
-    githubLink: '',
-    projectName: 'MaxModal',
-    org: 'DEX technologies',
-    year: '2024',
-    images: [maxmodal2, maxmodal1, maxmodal3],
-    description:
-      'MaxModal is a logistics and maritime transportation company, typically involved in container shipping and multimodal transport (sea, rail, road). The name suggests a focus on maximizing modal efficiency — using multiple modes of transport to optimize delivery routes and costs.',
-    chips: [
-      'React.js',
-      'Redux',
-      'Typescript',
-      'Styled components',
-      'i18n',
-      'antd v3',
-      'react-helmet',
-    ],
-  },
-]
+export const useProjectsData = () => {
+  const t = useTranslations('Projects')
+
+  return [
+    {
+      href: 'https://my-web-cv-kappa.vercel.app/',
+      githubLink: 'https://github.com/JohnnyZibert/WebCV',
+      projectName: t('webcv.name'),
+      org: '',
+      year: '',
+      images: [portfolio1, portfolio2, portfolio3],
+      description: t('webcv.description'),
+      chips: [
+        'React.js',
+        'Typescript',
+        'Next.js',
+        'Tailwindcss',
+        'Framer-motion',
+        'Axios',
+      ],
+    },
+    {
+      href: 'https://spartak.com/',
+      githubLink: '',
+      projectName: t('spartak.name'),
+      org: 'DEX technologies',
+      year: '2024',
+      images: [spartak1, spartak2, spartak3],
+      description: t('spartak.description'),
+      chips: [
+        'React.js',
+        'Next.js',
+        'Typescript',
+        'Redux toolkit',
+        'React hook form',
+        'Styled components',
+        'i18n',
+      ],
+    },
+    {
+      href: 'https://prosv.ru/',
+      githubLink: '',
+      projectName: t('prosv.name'),
+      org: 'aeroidea',
+      year: '2022-2024',
+      images: [prosv1, prosv2, prosv3],
+      description: t('prosv.description'),
+      chips: [
+        'React.js',
+        'Next.js',
+        'Zustand',
+        'Typescript',
+        'Tanstack Query',
+        'SCSS',
+        'Storybook',
+        'Jest',
+        'React testing library',
+      ],
+    },
+    {
+      href: 'https://maxmodal.com/',
+      githubLink: '',
+      projectName: t('maxmodal.name'),
+      org: 'DEX technologies',
+      year: '2024',
+      images: [maxmodal2, maxmodal1, maxmodal3],
+      description: t('maxmodal.description'),
+      chips: [
+        'React.js',
+        'Redux',
+        'Typescript',
+        'Styled components',
+        'i18n',
+        'antd v3',
+        'react-helmet',
+      ],
+    },
+  ]
+}

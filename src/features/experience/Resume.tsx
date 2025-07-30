@@ -1,8 +1,12 @@
+import { useTranslations } from 'next-intl'
+
 import { AnimationOneByOne } from '@/shared/animate/AnimationOneByOne'
 import { IconArrowUpRight } from '@/shared/assets/icons/icons'
 import { P16 } from '@/shared/ui/Typography'
 
 export const Resume = () => {
+  const t = useTranslations('Resume')
+
   return (
     <div className={'overflow-hidden'}>
       <AnimationOneByOne>
@@ -21,7 +25,7 @@ export const Resume = () => {
                 'text-green-600 dark:text-white group-hover:text-green-700  dark:group-hover:text-green-200 transition-all duration-300'
               }
             >
-              View full Resume
+              {t('viewResume')}
             </P16>
             <IconArrowUpRight
               className={`dark:fill-white fill-green-600 group-hover:transform group-hover:translate-x-2 rotate-45

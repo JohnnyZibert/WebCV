@@ -3,8 +3,13 @@ import './globals.css'
 import { Metadata } from 'next'
 import { Varela } from 'next/font/google'
 import { cookies } from 'next/headers'
+import { notFound } from 'next/navigation'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { ReactNode } from 'react'
 
 import { MouseSmokeEffect } from '@/features/mouseEffect/MouseEffect'
+import { routing } from '@/i18n/routing'
 import { imgMy } from '@/shared/assets/images/images'
 import { COOKIES_KEYS } from '@/shared/consts/localeStogrageConsts'
 
@@ -20,12 +25,16 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
-  children: React.ReactNode
+  children: ReactNode
+  params: Promise<{ locale: string }>
 }) {
-  const cookie = cookies().get(COOKIES_KEYS.THEME)?.value || 'dark'
+  const cookieStore = await cookies()
+  const cookie = cookieStore.get(COOKIES_KEYS.THEME)?.value || 'dark'
+  const messages = await getMessages()
   const promise = new Promise((resolve) => {
     resolve(2)
   })
@@ -34,13 +43,22 @@ export default function RootLayout({
     () => null
   )
 
+  const { locale } = await params
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
   return (
-    <html lang={'en'} className={`laptop:overflow-x-hidden ${cookie}`}>
-      <link rel="icon" href="/sa16.svg" sizes="16x16x" type={'image/svg'} />
+    <html lang={locale} className={`laptop:overflow-x-hidden ${cookie}`}>
       <body
         className={`${inter.className} transition-all duration-500 dark:bg-[#1a1a1a] bg-[#f3f4f6] `}
       >
-        <MouseSmokeEffect>{children}</MouseSmokeEffect>
+        <MouseSmokeEffect>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </MouseSmokeEffect>
       </body>
     </html>
   )
