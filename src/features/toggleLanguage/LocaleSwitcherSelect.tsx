@@ -8,7 +8,7 @@ import { usePathname, useRouter } from '@/i18n/navigation'
 
 export const ToggleSwitch = () => {
   const router = useRouter()
-  const [pending, startTransition] = useTransition()
+  const [, startTransition] = useTransition()
   const pathname = usePathname()
   const params = useParams()
 
