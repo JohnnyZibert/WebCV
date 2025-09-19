@@ -28,11 +28,7 @@ export const Socials = () => {
         </a>
       ))}
       <a
-        href={
-          params.locale === 'en'
-            ? 'Zgirdan_Evgeniy_En.pdf'
-            : 'Evgeniy_Zgirdan_RU.pdf'
-        }
+        href={'Zghirdan_Evgenii_CV.pdf'}
         target="_blank"
         rel="noopener noreferrer"
       >
