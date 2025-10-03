@@ -27,11 +27,7 @@ export const Socials = () => {
           />
         </a>
       ))}
-      <a
-        href={'Zghirdan_Evgenii_CV.pdf'}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={'#'} target="_blank" rel="noopener noreferrer">
         <P14 className={'dark:!text-white'}>{t('resume')}</P14>
       </a>
     </div>
