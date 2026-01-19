@@ -1,6 +1,5 @@
 'use client'
 
-import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import {
@@ -14,7 +13,6 @@ import { P14 } from '@/shared/ui/Typography'
 
 export const Socials = () => {
   const t = useTranslations('Resume')
-  const params = useParams()
 
   return (
     <div className={'flex gap-5 items-center'}>
