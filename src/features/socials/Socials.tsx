@@ -1,5 +1,6 @@
 'use client'
 
+import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import {
@@ -13,6 +14,8 @@ import { P14 } from '@/shared/ui/Typography'
 
 export const Socials = () => {
   const t = useTranslations('Resume')
+  const params = useParams()
+  const isEnLocale = params.locale === 'en'
 
   return (
     <div className={'flex gap-5 items-center'}>
@@ -25,7 +28,11 @@ export const Socials = () => {
           />
         </a>
       ))}
-      <a href={'#'} target="_blank" rel="noopener noreferrer">
+      <a
+        href={isEnLocale ? 'Zghirdan_Evgeniy_En.pdf' : 'Evgeniy_Zgirdan_RU.pdf'}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <P14 className={'dark:!text-white'}>{t('resume')}</P14>
       </a>
     </div>
