@@ -1,9 +1,9 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import { ReactNode } from 'react'
-import { Link as ScrollLink } from 'react-scroll'
 
 import { navBarBlocks } from '@/shared/consts/sidebarMenu'
+import { scrollToEl } from '@/shared/helpers/scrollTo'
 import { P14 } from '@/shared/ui/Typography'
 
 import { useNavScroll } from './useNavScroll'
@@ -45,20 +45,16 @@ const MenuItem = ({
           active ? 'active' : 'group-hover:w-[60px]'
         }`}
       />
-      <ScrollLink
-        to={id}
-        className={`cursor-pointer  ${active ? '!text-mainGreen ' : ''}`}
-        ignoreCancelEvents={false}
-        smooth={true}
-        offset={-80}
-        duration={500}
+      <button
+        onClick={() => scrollToEl(id)}
+        className={active ? '!text-mainGreen' : ''}
       >
         <P14
           className={'text-green-600 dark:text-white font-semibold uppercase'}
         >
           {children}
         </P14>
-      </ScrollLink>
+      </button>
     </li>
   )
 }
