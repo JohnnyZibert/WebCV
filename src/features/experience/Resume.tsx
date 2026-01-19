@@ -1,3 +1,4 @@
+import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import { AnimationOneByOne } from '@/shared/animate/AnimationOneByOne'
@@ -6,11 +7,19 @@ import { P16 } from '@/shared/ui/Typography'
 
 export const Resume = () => {
   const t = useTranslations('Resume')
+  const params = useParams()
+  const isEnLocale = params.locale === 'en'
 
   return (
     <div className={'overflow-hidden'}>
       <AnimationOneByOne>
-        <a href={'#'} target="_blank" rel="noopener noreferrer">
+        <a
+          href={
+            isEnLocale ? 'Zghirdan_Evgeniy_En.pdf' : 'Evgeniy_Zgirdan_RU.pdf'
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div
             className={
               'relative py-2 px-2 group flex items-center gap-3 cursor-pointer my-10 mb-20 w-fit'
