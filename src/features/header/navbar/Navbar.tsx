@@ -1,7 +1,7 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import { ReactNode } from 'react'
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 
 import { navBarBlocks } from '@/shared/consts/sidebarMenu'
 import { P14 } from '@/shared/ui/Typography'
@@ -45,7 +45,7 @@ const MenuItem = ({
           active ? 'active' : 'group-hover:w-[60px]'
         }`}
       />
-      <Link
+      <ScrollLink
         to={id}
         className={`cursor-pointer  ${active ? '!text-mainGreen ' : ''}`}
         ignoreCancelEvents={false}
@@ -58,7 +58,7 @@ const MenuItem = ({
         >
           {children}
         </P14>
-      </Link>
+      </ScrollLink>
     </li>
   )
 }
